@@ -107,6 +107,8 @@ function renderHints() {
                     renderHints();
                     if (g.isGameOver()) {
                         showGameOver();
+                    } else {
+                        $("#msg").html((g.currentPlayer === 1 ? "Blue" : "Red") + "'s turn to move.");
                     }
                 }
             });
