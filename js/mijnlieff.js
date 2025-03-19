@@ -456,22 +456,31 @@ class Game {
     ];
     for (let i = 0; i < lines43.length; i += 3) {
       let l4 = lines43[i];
-      if (this.board[l4[0]] > -1 && parseInt(this.board[l4[0]] / 4) === parseInt(this.board[l4[1]] / 4) && parseInt(this.board[l4[0]] / 4) === parseInt(this.board[l4[2]] / 4) && parseInt(this.board[l4[0]] / 4) === parseInt(this.board[l4[3]] / 4)) {
+      if (this.board[l4[0]] > -1 && this.board[l4[1]] > -1 && this.board[l4[2]] > -1 && this.board[l4[3]] > -1 &&
+        parseInt(this.board[l4[0]] / 4) === parseInt(this.board[l4[1]] / 4) &&
+        parseInt(this.board[l4[0]] / 4) === parseInt(this.board[l4[2]] / 4) &&
+        parseInt(this.board[l4[0]] / 4) === parseInt(this.board[l4[3]] / 4)) {
         score[parseInt(this.board[l4[0]] / 4)] += 2;
       } else {
         let l31 = lines43[i + 1];
-        if (this.board[l31[0]] > -1 && parseInt(this.board[l31[0]] / 4) === parseInt(this.board[l31[1]] / 4) && parseInt(this.board[l31[0]] / 4) === parseInt(this.board[l31[2]] / 4)) {
+        if (this.board[l31[0]] > -1 && this.board[l31[1]] > -1 && this.board[l31[2]] > -1 &&
+          parseInt(this.board[l31[0]] / 4) === parseInt(this.board[l31[1]] / 4) &&
+          parseInt(this.board[l31[0]] / 4) === parseInt(this.board[l31[2]] / 4)) {
           score[parseInt(this.board[l31[0]] / 4)] += 1;
         }
         let l32 = lines43[i + 2];
-        if (this.board[l32[0]] > -1 && parseInt(this.board[l32[0]] / 4) === parseInt(this.board[l32[1]] / 4) && parseInt(this.board[l32[0]] / 4) === parseInt(this.board[l32[2]] / 4)) {
+        if (this.board[l32[0]] > -1 && this.board[l32[1]] > -1 && this.board[l32[2]] > -1 &&
+          parseInt(this.board[l32[0]] / 4) === parseInt(this.board[l32[1]] / 4) &&
+          parseInt(this.board[l32[0]] / 4) === parseInt(this.board[l32[2]] / 4)) {
           score[parseInt(this.board[l32[0]] / 4)] += 1;
         }
       }
     }
     for (let i = 0; i < lines3.length; i++) {
       let l3 = lines3[i];
-      if (this.board[l3[0]] > -1 && parseInt(this.board[l3[0]] / 4) === parseInt(this.board[l3[1]] / 4) && parseInt(this.board[l3[0]] / 4) === parseInt(this.board[l3[2]] / 4)) {
+      if (this.board[l3[0]] > -1 && this.board[l3[1]] > -1 && this.board[l3[2]] > -1 &&
+        parseInt(this.board[l3[0]] / 4) === parseInt(this.board[l3[1]] / 4) &&
+        parseInt(this.board[l3[0]] / 4) === parseInt(this.board[l3[2]] / 4)) {
         score[parseInt(this.board[l3[0]] / 4)] += 1;
       }
     }
