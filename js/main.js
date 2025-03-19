@@ -118,7 +118,11 @@ function renderHints() {
             g.doAction({ piece: -1, idx: -1 });
             renderBoard();
             renderHints();
-            $("#msg").html((g.currentPlayer === 1 ? "Blue" : "Red") + "'s turn to move.");
+            if (g.isGameOver()) {
+                showGameOver();
+            } else {
+                $("#msg").html((g.currentPlayer === 1 ? "Blue" : "Red") + "'s turn to move.");
+            }
         } else {
             showGameOver();
         }
