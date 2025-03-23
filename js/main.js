@@ -92,7 +92,6 @@ function renderHints() {
     if (cells.length > 0) {
         cells.forEach(cell => {
             const dot = $('<div>').addClass('dot-indicator');
-            dot.css('background-color', g.currentPlayer === 2 ? '#da0016' : '#2c69a9');
             $("#c" + cell).append(dot);
             $("#c" + cell).addClass('has-dot');
             $("#c" + cell).on("click", () => {

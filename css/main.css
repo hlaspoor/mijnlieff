@@ -192,9 +192,9 @@ body {
   position: relative;
   width: 70px;
   height: 70px;
-  background-color: #2c69a9;
+  background-color: #333;
   border-radius: 10px;
-  border: 2px solid #1a4d8c;
+  border: 2px solid #333;
   /* 深蓝色边框 */
   box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
 }
@@ -203,24 +203,24 @@ body {
   position: relative;
   width: 70px;
   height: 70px;
-  background-color: #da0016;
+  background-color: #fff;
   border-radius: 10px;
-  border: 2px solid #b30012;
+  border: 2px solid #333;
   /* 深红色边框 */
   box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* 选中状态的边框样式也需要调整 */
 .piece-cell.selected .blue-square {
-  border: 3px solid #e8f0f8;
+  border: 3px solid #333;
   /* 浅蓝白色 */
-  box-shadow: 0 0 0 2px #1a4d8c;
+  box-shadow: 0 0 0 2px #333;
 }
 
 .piece-cell.selected .red-square {
-  border: 3px solid #ffe8ea;
+  border: 3px solid #333;
   /* 浅红白色 */
-  box-shadow: 0 0 0 2px #b30012;
+  box-shadow: 0 0 0 2px #333;
 }
 
 .piece-cell.selected {
@@ -233,6 +233,19 @@ body {
   opacity: 0.5;
   border-radius: 50%;
   position: absolute;
+  background-color: #333;
+}
+
+.red-square.x-mark::before,
+.red-square.x-mark::after,
+.red-square.plus-mark::before,
+.red-square.plus-mark::after,
+.red-square.circle-mark::before,
+.red-square.circle-mark::after{
+  background-color: #333;
+}
+.red-square.big-circle-mark::before {
+  border-color: #333;
 }
 
 .x-mark::before,
@@ -324,18 +337,18 @@ body {
   border-radius: 50%;
   font-size: 14px;
   font-weight: bold;
-  background-color: #0a1b47;
+  background-color: #333;
   border: none;
 }
 
 .blue-square+.number-indicator {
-  background-color: #2c69a9;
-  color: white;
+  background-color: #333;
+  color: #fff;
 }
 
 .red-square+.number-indicator {
-  background-color: #da0016;
-  color: white;
+  background-color: #fff;
+  color: #333;
 }
 
 /* 添加基础状态的过渡效果 */
