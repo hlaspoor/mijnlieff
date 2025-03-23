@@ -57,7 +57,7 @@ function newGame() {
             g.doAction(state.best.action);
             renderBoard();
             if (!g.isGameOver()) {
-                $("#msg").html((g.currentPlayer === 1 ? "Blue" : "Red") + "'s turn to move.");
+                $("#msg").html((g.currentPlayer === 1 ? "Black" : "White") + "'s turn to move.");
                 renderHints();
                 playSound(dropBuffer);
             } else {
@@ -66,7 +66,7 @@ function newGame() {
         }
     };
 
-    $("#msg").html("Blue's turn to move.");
+    $("#msg").html("Black's turn to move.");
 
     if (selectedPiece !== null) {
         selectedPiece.removeClass('selected');
@@ -77,7 +77,7 @@ function newGame() {
 }
 
 function showGameOver() {
-    $("#msg").html("Game over, " + (g.winner === 1 ? "Blue wins!" : (g.winner === 2 ? "Red wins!" : "Draw!")));
+    $("#msg").html("Game over, " + (g.winner === 1 ? "Black wins!" : (g.winner === 2 ? "White wins!" : "Draw!")));
     playSound(gameOverBuffer);
 }
 
@@ -107,7 +107,7 @@ function renderHints() {
                     if (g.isGameOver()) {
                         showGameOver();
                     } else {
-                        $("#msg").html((g.currentPlayer === 1 ? "Blue" : "Red") + "'s turn to move.");
+                        $("#msg").html((g.currentPlayer === 1 ? "Black" : "White") + "'s turn to move.");
                     }
                 }
             });
@@ -120,7 +120,7 @@ function renderHints() {
             if (g.isGameOver()) {
                 showGameOver();
             } else {
-                $("#msg").html((g.currentPlayer === 1 ? "Blue" : "Red") + "'s turn to move.");
+                $("#msg").html((g.currentPlayer === 1 ? "Black" : "White") + "'s turn to move.");
             }
         } else {
             showGameOver();
