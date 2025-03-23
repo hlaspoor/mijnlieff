@@ -239,11 +239,10 @@ body {
 .red-square.x-mark::before,
 .red-square.x-mark::after,
 .red-square.plus-mark::before,
-.red-square.plus-mark::after,
-.red-square.circle-mark::before,
-.red-square.circle-mark::after{
+.red-square.plus-mark::after{
   background-color: #333;
 }
+.red-square.circle-mark::before,
 .red-square.big-circle-mark::before {
   border-color: #333;
 }
