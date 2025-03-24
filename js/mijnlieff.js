@@ -573,10 +573,6 @@ class MCTSPlayer {
       root.totalNodeCount += root.children.length;
     }
 
-    if (root.count >= this.nTrials) {
-      return false;
-    }
-
     const t0 = root.count;
     const t1 = Math.min(this.nTrials, root.count + nt);
     const time0 = Date.now();
